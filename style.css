@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: outfit;
+  src: url(./assets/Outfit-Regular.ttf);
+} 
+
+body {
+  background-color: #FFF3DA;
+  font-family: outfit, sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: repeat(2, 10vh) 70vh 10vh;
+  padding: 1em;
+}
+
+.header {
+  grid-row: 1/2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+.icon {
+  height: 3em;
+  width: 3em;
+}
+
+.sign-up, .sortBooks, .addBook {
+  height: 3em;
+  width: 7em;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-family: outfit, sans-serif;
+  background-color: #BEADFA;
+  border: 1px solid #FFF3DA;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+}
+
+.actionBtn {
+  grid-row: 2/3;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.books {
+  grid-row: 3/4;
+}
+
+.footer {
+  grid-row: 4/5;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-self: center;
+  padding-bottom: 1em;
+}
+
+.card {
+  height: 20px;
+  width: 20px;
+  border-radius: 5%;
+  background-color: #EBD3F8;
+  margin: 2rem;
+}
