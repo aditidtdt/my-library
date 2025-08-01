@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Library</title>
     <link rel="stylesheet" href="./style.css" />
+    <link rel="javascript" src="./script.js" defer />
   </head>
   <body>
     <div class="container">
       <div class="header">
         <div class="logo">
           <img src="./assets/MyLibrary.png" alt="books icon" class="icon" />
-          <h1 class="title">My Library</h1>
+          <h1 class="logoTitle">My Library</h1>
         </div>
         <button class="sign-up">Sign up</button>
       </div>
@@ -25,9 +26,30 @@
         </select>
       </div>
       <div class="books">
-        <div class="book completed"></div>
-        <div class="book reading"></div>
-        <div class="book plan-to-read"></div>
+        <div class="book-details">
+          <form>
+            <h2>Add a book</h2>
+            <label for="cover">Enter url for the book cover:</label>
+            <input type="url" id="cover" class="detail" />
+
+            <label for="title">Enter the title of the book:</label>
+            <input type="text" id="title" class="detail" />
+
+            <label for="author">Enter the author of the book:</label>
+            <input type="text" id="author" class="detail" />
+
+            <label for="status">Select the reading status of the book:</label>
+            <div class="select-status">
+              <input type="radio" id="Read" name="status" />
+              <label for="Read">Read</label>
+              <input type="radio" id="Reading" name="status" checked />
+              <label for="Reading">Reading</label>
+              <input type="radio" id="plan-to-read" name="status" />
+              <label for="plan-to-read">Plan to read</label>
+            </div>
+            <button type="submit">Add</button>
+          </form>
+        </div>
       </div>
       <div class="footer">
         <a href="#">Github</a>
